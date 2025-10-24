@@ -5,38 +5,46 @@ import ej4
 import ej5
 import ej6
 
-
-
-while (True):
-
-    print("\n ------MENÚ PRINCIPAL------")
+def mostrar_menu():
+    print("\n------ MENÚ PRINCIPAL ------")
     print("1. Ecuaciones 2º grado")
-    print("2. Bucles")
-    print("3. Dibujar rectángulo")
-    print("4. Dibujar triángulo")
-    print("5. Dibujar hexágono")
-    print("6. Finalizar programa")
+    print("2. Adivinar el número")
+    print("3. Orden especial")
+    print("4. Números desplazados")
+    print("5. Calcular MCD")
+    print("6. Imprime pares")
+    print("7. Finalizar programa")
 
-    try:
-        opcion = int(input("Elige una opción del menú: "))
+def main():
+    while True:
+        mostrar_menu()
+        
+        try:
+            opcion = int(input("Elige una opción del menú: "))
+        except ValueError:
+            print("Error: introduce un número válido.")
+            continue  # Vuelve a mostrar el menú
 
         match opcion:
-
             case 1:
                 ej1.ejecutar()
             case 2:
                 ej2.adivinar_numero()
             case 3:
-                numIntro= ej3.leer_numeros() #Recoge y valida números introducidos por consola
-                ej3.mostrar_orden_especial(numIntro) #Saca orden de: 1,10,2,9...
-                ej3.mostrar_num_desplazados(numIntro) #Saca num desplazados 1 a la izq.
-                
+                num3 = ej3.leer_numeros()
+                ej3.mostrar_orden_especial(num3)
+            case 4:
+                num4 = ej3.leer_numeros()
+                ej4.mostrar_num_desplazados(num4)
+            case 5:
+                ej5.calcular_mcd()
+            case 6:
+                ej6.imprimeImpares()
+            case 7:
+                print("Programa finalizado")
+                break
             case _:
-                print("No es una opción correcta")
-    except ValueError:
-        print("Introduce una opción correcta")
+                print("Opción no válida. Por favor, elige entre 1 y 7.")
 
-    continuar = input("¿Quieres volver al menú? s/n").lower()
-    if continuar != "s":
-        print("Programa finalizado")
-        break
+if __name__ == "__main__":
+    main()
