@@ -24,7 +24,7 @@ economico = [
 
 def coste_produccion_coches():
     #Gestión Sedan
-    print("===PROGRAMA PRODUCCIÓN COCHES===")
+    print("====PROGRAMA DE PRODUCCIÓN DE COCHES====")
     print("El Sedan gasta semanalmante:")
     resultadoTotalSedan=0
     resultadoTotal=0
@@ -56,7 +56,7 @@ def coste_produccion_coches():
         print(f"{nombre}: {resultado} euros")
 
     resultadoTotal += resultadoTotalEconomico
-
+    print("==LOS GASTOS TOTALES SON==")
     print(f"El gasto del Sedan es: {resultadoTotalSedan}")
     print(f"El gasto de la camioneta es: {resultadoTotalCamioneta}")
     print(f"El gasto del Económico es: {resultadoTotalEconomico}")
@@ -66,7 +66,7 @@ def coste_produccion_coches():
 
 
 def ejecutar():
-    print("====PROGRAMA DE PRODUCCIÓN DE COCHES====")
+    
     coste_produccion_coches()
 
 if __name__ =="__main__":

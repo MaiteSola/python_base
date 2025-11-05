@@ -2,12 +2,15 @@ import paises;
 import zodiaco;
 import campeonatoFutbol;
 import gestionPersonas;
+import compatibilidadPersonas;
 import produccionCoches;
+import contraseña;
+import distancias;
 while (True):
    
         print("\n ------MENÚ PRINCIPAL------")
         print("1. Países")
-        print("2. Orden inverso")
+        print("2. Zodiaco")
         print("3. Campeonato de fútbol")
         print("4. Personas")
         print("5. Conexión personas")
@@ -32,13 +35,13 @@ while (True):
                  case 4:
                     gestionPersonas.ejecutar()
                  case 5:
-                    produccionCoches.ejecutar()              
+                    compatibilidadPersonas.ejecutar()              
                  case 6:
-                    print("Por hacer")
+                    produccionCoches.ejecutar()
                  case 7:
-                    print("Por hacer")  
+                    contraseña.ejecutar() 
                  case 8:
-                    print("Por hacer")
+                    distancias.ejecutar()
                  case 9:
                     ("Finalizando programa...")
                     break
